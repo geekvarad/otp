@@ -14,12 +14,12 @@ class otpListener {
 
     companion object {
         suspend fun otpChecker(activity: Activity) {
-            var client: SmsRetrieverClient = SmsRetriever.getClient(activity)
-            var task = client.startSmsRetriever()
+            val client: SmsRetrieverClient = SmsRetriever.getClient(activity)
+            val task = client.startSmsRetriever()
             //val checker : Boolean = task.isComplete;
-            task.addOnSuccessListener(activity, OnSuccessListener {
+            /*task.addOnSuccessListener(activity, OnSuccessListener {
 
-            })
+            })*/
             task.addOnFailureListener(activity, OnFailureListener {
                 Toast.makeText(
                     activity.applicationContext,
